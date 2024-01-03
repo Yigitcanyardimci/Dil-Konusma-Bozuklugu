@@ -16,7 +16,7 @@ Erkek: 1051
 Kadın: 79
 Belirtmek İstemiyorum: 4
 Bu bilgiler, kekemelikle ilgili genel istatistikler üzerinden toplumun bu konudaki algısını ve deneyimlerini daha iyi anlamayı amaçlamaktadır.
-
+https://www.kaggle.com/datasets/sachinsrivastava/topgintakedataset
 
 ## Paketler
 
@@ -73,6 +73,9 @@ Görsel analize göre, kekemelik erkek bireylerde kadınlara göre daha sık ort
 ## Grafik-4 Cinsiyete Göre Kekemelik Zorluk Seviyesi
 
 
+
+
+
 ![CİNSİYT VE GGSTATSPLOT](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/72ea8730-d359-492a-8ac9-2064c67caded)
 
 
@@ -83,6 +86,58 @@ Grafik analizinde cinsiyet ile kekemelik zorluğu arasında belirgin bir ilişki
 
 
 ## Grafik-5 Konuşulan Dil Sayısı ve Kekemeliğin Zorluk Seviyesi
+
+```
+
+
+ # install.packages(c("dplyr", "ggplot2"))
+
+library(dplyr)
+library(ggplot2)
+
+# Kolon isimlerini düzenle
+colnames(TOPGIntakeData) <- make.names(colnames(TOPGIntakeData))
+
+# Veriyi filtrele
+filtered_data <- TOPGIntakeData %>%
+  filter(!is.na(Activity) & Activity != "")
+
+# Aktivite gruplaması yap
+filtered_data <- filtered_data %>%
+  mutate(Activity_Grouped = case_when(
+    grepl("Tech", Activity) ~ "Teknoloji/Mühendis",
+    grepl("Developer", Activity) ~ "Geliştirici",
+    grepl("Manager", Activity) ~ "Yönetici",
+    grepl("Analyst", Activity) ~ "Analist",
+    TRUE ~ NA_character_
+  )) %>%
+  na.omit() 
+
+# Aktivite sıralaması
+activity_order <- c("Teknoloji/Mühendis", "Geliştirici", "Yönetici", "Analist")
+sorted_data <- filtered_data %>%
+  group_by(Activity_Grouped) %>%
+  mutate(Count = n()) %>%
+  arrange(Count, .by_group = TRUE)
+
+# Renk paleti
+blue_palette <- colorRampPalette(c("#C7E9C0", "#1F75FE"))(10)
+blue_palette[8:10] <- c("#1F75FE", "#0C47A1", "#07306B")
+
+# Görselleştirme
+ggplot(sorted_data, aes(x = Count, y = reorder(Activity_Grouped, Count), fill = as.factor(Difficulty_Level))) +
+  geom_bar(stat = "identity", position = "dodge") +
+  scale_fill_manual(values = blue_palette) +
+  labs(
+    title = "İş Kategorisine Göre Kekeme Zorluğu Tanımlamaları",
+    y = "İş Kategorisi",
+    x = "Gözlem Sayısı",
+    fill = "Zorluk Seviyesi"
+  ) +
+  theme_minimal()
+
+
+```
 
 
 
