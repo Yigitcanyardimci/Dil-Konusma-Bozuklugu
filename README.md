@@ -33,7 +33,7 @@ Bu bilgiler, kekemelikle ilgili genel istatistikler üzerinden toplumun bu konud
 
 
 
-[YAŞ.png](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/blob/main/YAŞ.png?raw=true)
+(https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/blob/main/YAŞ.png?raw=true)
 
 
 Grafik, kekemelik vakalarının genç yaşlarda özellikle yoğunlaştığını gösterirken, yaş![Uploading image.png…]()
