@@ -46,6 +46,7 @@ Grafik, kekemelik vakalarının genç yaşlarda özellikle yoğunlaştığını 
 ## Grafik-2 Kekemelik ile Yaş Arasındaki İlişki
 
 
+![YAŞ VE GGSTATSPLOT](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/21cc931c-8a20-4fe5-9808-a6a2029b5d9c)
 
 
 
@@ -61,6 +62,7 @@ Görsel verilerimiz, özellikle genç yaş grubunda (18-30) kekemeliğin daha ya
 
 
 
+![CİNSİYET](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/85f3d67e-854a-447f-9526-6db57716e0c2)
 
 
 
@@ -72,6 +74,7 @@ Görsel analize göre, kekemelik erkek bireylerde kadınlara göre daha sık ort
 ## Grafik-4 Cinsiyete Göre Kekemelik Zorluk Seviyesi
 
 
+![CİNSİYT VE GGSTATSPLOT](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/72ea8730-d359-492a-8ac9-2064c67caded)
 
 
 
@@ -84,6 +87,7 @@ Grafik analizinde cinsiyet ile kekemelik zorluğu arasında belirgin bir ilişki
 
 
 
+![iş Kat](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/4a4707bd-e907-4b65-b841-5d38b581c47e)
 
 
 
@@ -98,6 +102,7 @@ Görsel analizimize göre, özellikle iki dil konuşabilen bireylerde kekemeliğ
 ## Grafik-6 İş Kategorisine Göre Kekemeliğin Görülme Sıklığı
 
 
+![KONUŞULAN DİL SAYISI](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/4492b789-ccb3-4f4e-a49d-96317510da25)
 
 
 
