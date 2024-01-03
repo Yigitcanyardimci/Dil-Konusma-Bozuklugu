@@ -16,12 +16,9 @@ Erkek: 1051
 Kadın: 79
 Belirtmek İstemiyorum: 4
 Bu bilgiler, kekemelikle ilgili genel istatistikler üzerinden toplumun bu konudaki algısını ve deneyimlerini daha iyi anlamayı amaçlamaktadır.
+
+
 https://www.kaggle.com/datasets/sachinsrivastava/topgintakedataset
-
-## Paketler
-
-
-
 
 
 
