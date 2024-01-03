@@ -1,4 +1,4 @@
-Dil Konuşma Bozukluğue ve Kekemelik
+# Dil Konuşma Bozukluğue ve Kekemelik
 
 Dil konuşma bozukluğu, bireyin normalden farklı bir şekilde sesleri üretmesi veya kelimeleri düzgün bir şekilde kullanma yeteneğinin etkilendiği bir durumu ifade eder. Bu bozukluklar genellikle çocukluk döneminde başlar ve çeşitli nedenlere bağlı olarak ortaya çıkabilir. Kekemelik ise, konuşma akıcılığının bozulduğu ve konuşan kişinin bazı sesleri tekrarladığı, uzattığı veya bloke ettiği bir konuşma bozukluğudur. Genellikle stres, heyecan veya yorgunluk gibi faktörler kekemeliği artırabilir. Dil konuşma bozuklukları ve kekemelik, bireylerin günlük iletişim becerilerini etkileyebilir ve uygun terapötik yaklaşımlarla yönetilebilir.
 Bu bilgiler ışığında bize verilen dil konuşma bozukluğu olan insanların verileri üzerinden çeşitli faktörleri ve etkenleri araştırdık. Bu araştırmama sırasında veri görselleştirme teknikleri kullanıldı. 
@@ -37,8 +37,7 @@ Bu bilgiler, kekemelikle ilgili genel istatistikler üzerinden toplumun bu konud
 
 
 
-Grafik, kekemelik vakalarının genç yaşlarda özellikle yoğunlaştığını gösterirken, yaş![Uploading image.png…]()
-ın ilerlemesiyle birlikte zorlukların arttığını açıkça ifade etmektedir. Aynı zamanda, kekemeliğin en yüksek zorluk seviyelerinde yaş ortalamasının belirgin bir şekilde yükseldiğini vurgulayarak yaşın kekemelik üzerinde etkili bir faktör olduğunu gösteriyor. Yapılan analiz, kekemelikle mücadelede yaşın kritik bir parametre olduğunu ortaya koyuyor ve bu nedenle yaşa özgü müdahale stratejilerinin geliştirilmesinin büyük bir önem taşıdığını vurguluyor.
+Grafik, kekemelik vakalarının genç yaşlarda özellikle yoğunlaştığını gösterirken, yaşın ilerlemesiyle birlikte zorlukların arttığını açıkça ifade etmektedir. Aynı zamanda, kekemeliğin en yüksek zorluk seviyelerinde yaş ortalamasının belirgin bir şekilde yükseldiğini vurgulayarak yaşın kekemelik üzerinde etkili bir faktör olduğunu gösteriyor. Yapılan analiz, kekemelikle mücadelede yaşın kritik bir parametre olduğunu ortaya koyuyor ve bu nedenle yaşa özgü müdahale stratejilerinin geliştirilmesinin büyük bir önem taşıdığını vurguluyor.
 
 
 
