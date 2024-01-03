@@ -287,9 +287,10 @@ ggplot(sorted_data, aes(x = Count, y = reorder(Activity_Grouped, Count), fill = 
 
 ```
 
+![KONUŞULAN DİL SAYISI](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/4492b789-ccb3-4f4e-a49d-96317510da25)
 
 
-![iş Kat](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/4a4707bd-e907-4b65-b841-5d38b581c47e)
+
 
 
 
@@ -304,7 +305,42 @@ Görsel analizimize göre, özellikle iki dil konuşabilen bireylerde kekemeliğ
 ## Grafik-6 İş Kategorisine Göre Kekemeliğin Görülme Sıklığı
 
 
-![KONUŞULAN DİL SAYISI](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/4492b789-ccb3-4f4e-a49d-96317510da25)
+```
+#install.packages("ggplot2")
+#install.packages("dplyr")
+library(dplyr)
+library(ggplot2)
+
+filtered_data <- TOPGIntakeData %>%
+  mutate(LanguageCount = str_count(Languages, ",") + 1) %>%
+  filter(LanguageCount >= 1 & LanguageCount <= 5, Difficulty_Level %in% c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"))
+
+blue_palette <- colorRampPalette(c("#C7E9C0", "#1F75FE"))(10)
+
+blue_palette[8:10] <- c("#1F75FE", "#0C47A1", "#07306B")
+
+#nokta grafiğini oluşturalım
+ggplot(filtered_data, aes(x = LanguageCount, y = as.numeric(Difficulty_Level), color = factor(Difficulty_Level))) +
+  geom_point(position = position_jitter(width = 0.2, height = 0.2), size = 3, alpha = 0.7) +
+  
+  geom_density_2d(color = "gray", linetype = "dashed", size = 0.5, n = 100) +
+  
+    scale_color_manual(values = blue_palette, name = "Zorluk Seviyesi") +
+  
+  labs(
+    title = "Konuşulan Dil Sayısı ve Kekemeliğin Zorluk Seviyesi Arasındaki İlişkisi",
+    x = "Konuşulan Dil Sayısı",
+    y = "Kekemeliğin Zorluk Seviyesi"
+  ) +
+  
+  theme_minimal()
+
+
+```
+
+
+
+![iş Kat](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/4a4707bd-e907-4b65-b841-5d38b581c47e)
 
 
 
