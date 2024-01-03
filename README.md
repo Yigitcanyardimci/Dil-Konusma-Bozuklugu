@@ -33,10 +33,11 @@ Bu bilgiler, kekemelikle ilgili genel istatistikler üzerinden toplumun bu konud
 
 
 
-YAŞ.png
+[YAŞ.png](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/blob/main/YAŞ.png?raw=true)
 
 
-Grafik, kekemelik vakalarının genç yaşlarda özellikle yoğunlaştığını gösterirken, yaşın ilerlemesiyle birlikte zorlukların arttığını açıkça ifade etmektedir. Aynı zamanda, kekemeliğin en yüksek zorluk seviyelerinde yaş ortalamasının belirgin bir şekilde yükseldiğini vurgulayarak yaşın kekemelik üzerinde etkili bir faktör olduğunu gösteriyor. Yapılan analiz, kekemelikle mücadelede yaşın kritik bir parametre olduğunu ortaya koyuyor ve bu nedenle yaşa özgü müdahale stratejilerinin geliştirilmesinin büyük bir önem taşıdığını vurguluyor.
+Grafik, kekemelik vakalarının genç yaşlarda özellikle yoğunlaştığını gösterirken, yaş![Uploading image.png…]()
+ın ilerlemesiyle birlikte zorlukların arttığını açıkça ifade etmektedir. Aynı zamanda, kekemeliğin en yüksek zorluk seviyelerinde yaş ortalamasının belirgin bir şekilde yükseldiğini vurgulayarak yaşın kekemelik üzerinde etkili bir faktör olduğunu gösteriyor. Yapılan analiz, kekemelikle mücadelede yaşın kritik bir parametre olduğunu ortaya koyuyor ve bu nedenle yaşa özgü müdahale stratejilerinin geliştirilmesinin büyük bir önem taşıdığını vurguluyor.
 
 
 
