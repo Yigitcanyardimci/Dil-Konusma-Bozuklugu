@@ -31,6 +31,47 @@ https://www.kaggle.com/datasets/sachinsrivastava/topgintakedataset
 
 ## Grafik-1 Kekemelik ile Yaş Arasındaki İlişki
 
+```
+#install.packages(c("dplyr", "ggplot2"))
+library(dplyr)
+library(ggplot2)
+
+# Sütun adlarını güncelleyelim
+colnames(TOPGIntakeData) <- c("Timestamp", "Your_Age", "Your_Gender", "Languages", "City", "Qualification", "Activity", "Difficulty_Level")
+
+
+age_mean <- mean(TOPGIntakeData$Your_Age, na.rm = TRUE)
+
+
+blue_palette <- colorRampPalette(c("#C7E9C0", "#1F75FE"))(length(levels(TOPGIntakeData$Difficulty_Level)))
+
+blue_palette[8:10] <- c("#1F75FE", "#0C47A1", "#07306B")
+
+# Yeni renk paletini kullanarak violin plot oluşturalım
+ggplot(TOPGIntakeData, aes(x = Difficulty_Level, y = Your_Age, fill = Difficulty_Level)) +
+  geom_violin(trim = FALSE) +
+  geom_boxplot(width = 0.2, fill = "white", color = "black") +
+  scale_fill_manual(values = blue_palette) +
+  
+  # Yaş ortalamasını gösteren düz çizgi ekleyelim
+  geom_hline(yintercept = age_mean, linetype = "solid", color = "red", size = 0.5) +
+  
+  labs(
+    title = "Yaşa Göre Kekemelik Zorluk Seviyesi",
+    x = "Zorluk Seviyesi",
+    y = "Yaş",
+    fill = "Zorluk Seviyesi"
+  ) +
+  
+  theme_minimal()
+
+
+```
+
+
+
+
+
 
 ![YAŞ](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/453e8792-74c2-46a8-9ad1-410fcacac145)
 
@@ -43,6 +84,50 @@ Grafik, kekemelik vakalarının genç yaşlarda özellikle yoğunlaştığını 
 
 
 ## Grafik-2 Kekemelik ile Yaş Arasındaki İlişki
+
+
+```
+
+# install.packages(c("ggstatsplot", "dplyr"))
+
+# Kütüphaneleri yükleyin
+library(ggstatsplot)
+library(dplyr)
+
+# Veri çerçevesindeki cinsiyet değişkenini faktöre çevirin
+TOPGIntakeData$`Your gender?` <- factor(TOPGIntakeData$`Your gender?`)
+
+# ggstatsplot ile scatter plot oluşturun ve cinsiyete göre renklendirin
+ggstatsplot_output <- ggstatsplot::ggscatterstats(
+  data = TOPGIntakeData,
+  x = `Your Age`,
+  y = `How will you describe your difficulties with stammering?`,  # Doğru değişkeni kullanalım
+  title = "Yaş ve Kekemelik Zorluk Seviyesi",
+  xlab = "Yaş",
+  ylab = "Kekemelik Zorluk Seviyesi",
+  messages = FALSE,
+  cor.coef = TRUE,           # Korelasyon katsayısını göster
+  cor.method.args = list("spearman"),  # Korelasyon yöntemini belirt
+  ggtheme = ggplot2::theme_minimal() + ggplot2::theme(legend.position = "none"),  # Tema özelleştirmeleri
+  ggstatsplot.layer = FALSE,  # İstatistiksel katmanı kaldır
+  conf.level = 0.95,          # Güven aralığı
+  conf.method.args = list("t"),  # Güven aralığı hesaplama yöntemi
+  alpha = 0.7,               # Nokta saydamlığı
+  dot.size = 3,              # Nokta boyutu
+  add.reg.line = TRUE,       # Regresyon çizgisi ekle
+  reg.line.color = "red",    # Regresyon çizgisi rengi
+  reg.line.linetype = 2,     # Regresyon çizgisi tipi
+  by = `Your gender?`,       # Cinsiyete göre renklendir
+  pairwise.comparisons = TRUE,  # Gruplar arası karşılaştırmaları göster
+  geom.params = list(bins = 20)  # Histogram için bins parametresini belirle
+)
+
+# ggstatsplot çıktısını yazdır
+print(ggstatsplot_output)
+
+
+```
+
 
 
 ![YAŞ VE GGSTATSPLOT](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/21cc931c-8a20-4fe5-9808-a6a2029b5d9c)
@@ -59,6 +144,45 @@ Görsel verilerimiz, özellikle genç yaş grubunda (18-30) kekemeliğin daha ya
 
 ## Grafik-3 Cinsiyete Göre Kekemelik Zorluk Seviyesi
 
+```
+# install.packages("dplyr")
+# install.packages("ggplot2")
+library(dplyr)
+library(ggplot2)
+
+#sütun adlarını güncelleyelim
+colnames(TOPGIntakeData) <- c("Timestamp", "Your_Age", "Your_Gender", "Languages", "City", "Qualification", "Activity", "Difficulty_Level")
+
+#Veri çerçevesi, Your_Gender ve Difficulty_Level sütunları için boş olmayan değerlere sahip gözlemleri filtreleyelim
+filtered_data <- TOPGIntakeData %>%
+  filter(!is.na(Your_Gender) & Your_Gender != "" & !is.na(Difficulty_Level) & Difficulty_Level != "")
+
+blue_palette <- colorRampPalette(c("#C7E9C0", "#4A90E2"))(length(levels(filtered_data$Difficulty_Level)))
+
+blue_palette[8:10] <- c("#1F75FE", "#0C47A1", "#07306B")
+
+#çubuk grafiği
+ggplot(filtered_data, aes(x = reorder(Your_Gender, table(Your_Gender)[Your_Gender]), fill = Difficulty_Level)) +
+  geom_bar(position = "dodge", stat = "count", width = 0.7, color = "white") +
+  scale_fill_manual(values = blue_palette) +
+  labs(
+    title = "              Cinsiyete Göre Kekemeliğin Zorluk Seviyesi ve Gözlem Sayısı",
+    x = "Cinsiyet",
+    y = "Gözlem Sayısı",
+    fill = "Zorluk Seviyesi"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, hjust = 0.5, face = "bold"),
+    axis.title = element_text(size = 14, face = "bold"),
+    axis.text = element_text(size = 12),
+    legend.title = element_text(size = 14, face = "bold"),
+    legend.text = element_text(size = 12)
+  )
+
+
+
+```
 
 
 ![CİNSİYET](https://github.com/Yigitcanyardimci/Dil-Konu-ma-Bozuklu-u/assets/147248981/85f3d67e-854a-447f-9526-6db57716e0c2)
@@ -73,6 +197,33 @@ Görsel analize göre, kekemelik erkek bireylerde kadınlara göre daha sık ort
 ## Grafik-4 Cinsiyete Göre Kekemelik Zorluk Seviyesi
 
 
+```
+# install.packages(c("ggstatsplot", "dplyr"))
+
+library(ggstatsplot)
+library(dplyr)
+
+if ("Your_Gender" %in% names(TOPGIntakeData)) {
+  # Cinsiyet değişkenini faktöre çevirin ve Türkçe etiketleri tanımlayın
+  TOPGIntakeData$Your_Gender <- factor(TOPGIntakeData$Your_Gender, levels = c("Male", "Female", "Prefer not to say"), labels = c("Erkek", "Kadın", "Belirtmek İstemeyenler"))
+
+  ggbetweenstats_output <- ggbetweenstats(
+    data = TOPGIntakeData,
+    x = Your_Gender,
+    y = Difficulty_Level,
+    title = "Cinsiyet ve Kekemelik Zorluk Seviyesi",
+    type = "np",
+    messages = FALSE,
+    ylab = "Kekemelik Zorluk Seviyesi",  # Y eksenini Türkçe ayarla
+    xlab = "Cinsiyet"  # X eksenini Türkçe ayarla
+  )
+
+  print(ggbetweenstats_output)
+} else {
+  cat("Hata: 'Your_Gender' adında bir sütun bulunamadı.")
+}
+
+```
 
 
 
