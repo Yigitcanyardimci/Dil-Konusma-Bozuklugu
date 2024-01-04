@@ -1,7 +1,20 @@
 # Dil Konuşma Bozukluğu ve Kekemelik
 
-Dil konuşma bozukluğu, bireyin normalden farklı bir şekilde sesleri üretmesi veya kelimeleri düzgün bir şekilde kullanma yeteneğinin etkilendiği bir durumu ifade eder. Bu bozukluklar genellikle çocukluk döneminde başlar ve çeşitli nedenlere bağlı olarak ortaya çıkabilir. Kekemelik ise, konuşma akıcılığının bozulduğu ve konuşan kişinin bazı sesleri tekrarladığı, uzattığı veya bloke ettiği bir konuşma bozukluğudur. Genellikle stres, heyecan veya yorgunluk gibi faktörler kekemeliği artırabilir. Dil konuşma bozuklukları ve kekemelik, bireylerin günlük iletişim becerilerini etkileyebilir ve uygun terapötik yaklaşımlarla yönetilebilir.
-Bu bilgiler ışığında bize verilen dil konuşma bozukluğu olan insanların verileri üzerinden çeşitli faktörleri ve etkenleri araştırdık. Bu araştırmama sırasında veri görselleştirme teknikleri kullanıldı. 
+Dil ve konuşma bozuklukları, her yaştan bireyde görülebilen
+gelişimsel veya edinilmiş dil bozukluklarını, kekemelik ve
+hızlı-bozuk konuşma gibi konuşmada görülen akıcılık
+bozukluklarını, konuşma seslerinin doğru şekilde üretilememesi
+şeklinde özetlenebilen konuşma sesi bozukluklarını, ses ve
+yutma bozukluklarını ifade eder. Dil ve konuşma bozukluklarının
+değerlendirme ve terapisinde Dil ve Konuşma Terapistleri görev
+yapar.
+
+Kekemelik, konuşma akıcılığını ve pürüzsüzlüğünü bozan
+bir iletişim bozukluğu olmakla birlikte dil ve konuşma
+bozukluklarının en yaygın görülen türleri arasındadır.
+Sesleri, heceleri veya kelimeleri tekrar etme, uzatma veya
+blok şekilde karakterize olabilir. Çoğunlukla gelişimsel
+dönemde ortaya çıkar ve kronikleşebilir.
 
 # Veri Seti 
 
