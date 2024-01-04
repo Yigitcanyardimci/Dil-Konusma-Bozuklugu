@@ -351,3 +351,21 @@ ggplot(sorted_data, aes(x = Count, y = reorder(Activity_Grouped, Count), fill = 
 Grafik analizine göre, teknik işlerle uğraşan veya mühendis olan bireylerde kekemeliğin görülme oranının diğer meslek gruplarına göre daha yüksek olduğunu gözlemliyoruz. 
 
 
+
+
+
+# Sonuç 
+
+Örneklem analizlerinin sonucuna bağlı olarak,
+
+Kekemelik genellikle genç yaşlarda yoğun olarak görülse de, yaş ilerledikçe zorluklar artar. Cinsiyet analizi, erkeklerde
+kadınlara göre daha sık rastlanan bir durumu ortaya koyar. Ancak yaşanan zorluklar arasında belirgin bir ilişki bulunmaz.
+İki dil konuşabilen bireylerde kekemelik daha yaygındır, ancak dil sayısı arttıkça görülme oranı azalır. Ayrıca, teknik işlerle
+uğraşan veya mühendislikle ilgilenen bireylerde kekemelik, diğer meslek gruplarına kıyasla daha sık gözlemlenir.
+
+Zorluk seviyesi kekemeliğin zorluk düzeyini I ile 10 arasında derecelendiren faktördür.
+
+
+
+
+
